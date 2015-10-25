@@ -1,0 +1,87 @@
+public class Cuenta
+{
+    private String nombre;
+    private String apellidoPat;
+    private String apellidoMat;
+    private String correo;
+    private String contraseña;
+
+    public Cuenta( )
+    {
+        this( " ", " ", " ", " ", " " );
+    }
+
+    public Cuenta( String nombre, String apellidoPat, String apellidoMat, String correo, String contraseña )
+    {
+        this.nombre = nombre;
+        this.apellidoPat = apellidoPat;
+        this.apellidoMat = apellidoMat;
+        this.correo = correo;
+        this.contraseña = contraseña;
+    }
+
+    public Cuenta( Cuenta c )
+    {
+        this( c.nombre, c.apellidoPat, c.apellidoMat, c.correo, c.contraseña )
+    }
+
+    public void setNombre ( String nombre )
+    {
+        this.nombre = nombre;
+    }
+
+    public void setApellidoPat( String apellidoPat )
+    {
+        this.apellidoPat = apellidoPat;
+    }
+
+    public void setApellidoMat ( String apellidoMat )
+    {
+        this.apellidoMat = apellidoMat;
+    }
+
+    public void setCorreo ( String correo )
+    {
+        this.correo = correo;
+    }
+
+    public void setContraseña ( String contraseña )
+    {
+        this.contraseña = contraseña
+    }
+
+    public String getNombre ( )
+    {
+        return nombre;
+    }
+
+    public String getApellidoPat ( )
+    {
+        return apellidoPat;
+    }
+
+    public String getApellidoMat ( )
+    {
+        return apellidoMat;
+    }
+
+    public String getCorreo ( )
+    {
+        return correo;
+    }
+
+    public String getContraseña ( )
+    {
+        return contraseña;
+    }
+
+    public void destruir( )
+    {
+        this.nombre = "";
+        this.apellidoPat = "";
+        this.apellidoMat = "";
+        this.correo = "";
+        this.contraseña = "";
+        System.gc( );
+    }
+}
